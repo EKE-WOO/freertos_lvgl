@@ -1,0 +1,10 @@
+bp_freertos\lv_printf.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_printf.c
+bp_freertos\lv_printf.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_printf.h
+bp_freertos\lv_printf.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../lv_conf_internal.h
+bp_freertos\lv_printf.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+bp_freertos\lv_printf.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../lv_conf_kconfig.h
+bp_freertos\lv_printf.o: ../Middlewares/LVGL/GUI/lvgl/examples/porting/../../lv_conf.h
+bp_freertos\lv_printf.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+bp_freertos\lv_printf.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+bp_freertos\lv_printf.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_types.h
+bp_freertos\lv_printf.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

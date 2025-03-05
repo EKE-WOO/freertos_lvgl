@@ -1,0 +1,12 @@
+bp_freertos\lv_async.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_async.c
+bp_freertos\lv_async.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_async.h
+bp_freertos\lv_async.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_types.h
+bp_freertos\lv_async.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+bp_freertos\lv_async.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_mem.h
+bp_freertos\lv_async.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../lv_conf_internal.h
+bp_freertos\lv_async.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../lv_conf_kconfig.h
+bp_freertos\lv_async.o: ../Middlewares/LVGL/GUI/lvgl/examples/porting/../../lv_conf.h
+bp_freertos\lv_async.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+bp_freertos\lv_async.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+bp_freertos\lv_async.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_timer.h
+bp_freertos\lv_async.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
