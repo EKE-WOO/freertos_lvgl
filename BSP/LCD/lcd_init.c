@@ -1,7 +1,7 @@
 #include "lcd_init.h"
 #include "delay.h"
-#include "spi.h"
-#include "tim.h"
+//#include "spi.h"
+//#include "tim.h"
 
 /******************************************************************************
       函数说明：LCD端口初始化
@@ -12,28 +12,49 @@ void LCD_GPIO_Init(void)
 {
 	GPIO_InitTypeDef  GPIO_InitStructure = {0};
 	
-	__HAL_RCC_GPIOC_CLK_ENABLE();
  	__HAL_RCC_GPIOB_CLK_ENABLE();
-	__HAL_RCC_GPIOD_CLK_ENABLE();
 	__HAL_RCC_GPIOA_CLK_ENABLE();
+	
+//	GPIO_InitStructure.Pin = BLK_PIN;	 
+// 	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP; 		 //推挽输出
+//	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_VERY_HIGH;//速度50MHz
+// 	HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);	  //初始化GPIOA
+// 	HAL_GPIO_WritePin(GPIOA, BLK_PIN, GPIO_PIN_SET);
 	
 	GPIO_InitStructure.Pin = RES_PIN;	 
  	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP; 		 //推挽输出
 	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_VERY_HIGH;//速度50MHz
- 	HAL_GPIO_Init(GPIOB, &GPIO_InitStructure);	  //初始化GPIOB
- 	HAL_GPIO_WritePin(GPIOB, RES_PIN, GPIO_PIN_SET);
+ 	HAL_GPIO_Init(RES_PORT, &GPIO_InitStructure);	  //初始化GPIOB
+ 	HAL_GPIO_WritePin(RES_PORT, RES_PIN, GPIO_PIN_SET);
 
 	GPIO_InitStructure.Pin = DC_PIN;	 
  	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP; 		 //推挽输出
 	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_VERY_HIGH;//速度50MHz
- 	HAL_GPIO_Init(GPIOC, &GPIO_InitStructure);	  //初始化GPIOC
- 	HAL_GPIO_WritePin(GPIOC, DC_PIN, GPIO_PIN_SET);
+ 	HAL_GPIO_Init(DC_PORT, &GPIO_InitStructure);	  //初始化GPIOC
+ 	HAL_GPIO_WritePin(DC_PORT, DC_PIN, GPIO_PIN_SET);
 
 	GPIO_InitStructure.Pin = CS_PIN;	 
  	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP; 		 //推挽输出
 	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_VERY_HIGH;//速度50MHz
- 	HAL_GPIO_Init(GPIOD, &GPIO_InitStructure);	  //初始化GPIOD
- 	HAL_GPIO_WritePin(GPIOD, CS_PIN, GPIO_PIN_SET);
+ 	HAL_GPIO_Init(CS_PORT, &GPIO_InitStructure);	  //初始化GPIOD
+ 	HAL_GPIO_WritePin(CS_PORT, CS_PIN, GPIO_PIN_SET);
+
+//#define SCLK_PORT			GPIOB
+//#define SCLK_PIN			GPIO_PIN_3
+
+//#define SDA_PORT			GPIOB
+//#define SDA_PIN				GPIO_PIN_5
+	GPIO_InitStructure.Pin = SCLK_PIN;	 
+ 	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP; 		 //推挽输出
+	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_VERY_HIGH;//速度50MHz
+ 	HAL_GPIO_Init(SCLK_PORT, &GPIO_InitStructure);	  //初始化GPIOC
+ 	HAL_GPIO_WritePin(SCLK_PORT, SCLK_PIN, GPIO_PIN_SET);
+
+	GPIO_InitStructure.Pin = SDA_PIN;	 
+ 	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP; 		 //推挽输出
+	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_VERY_HIGH;//速度50MHz
+ 	HAL_GPIO_Init(SDA_PORT, &GPIO_InitStructure);	  //初始化GPIOD
+ 	HAL_GPIO_WritePin(SDA_PORT, SDA_PIN, GPIO_PIN_SET);
 
 }
 
@@ -46,10 +67,10 @@ void LCD_GPIO_Init(void)
 void LCD_Writ_Bus(u8 dat) 
 {	
 	//hard SPI
-	HAL_SPI_Transmit(&hspi1,&dat,1,1);
+//	HAL_SPI_Transmit(&hspi1,&dat,1,1);
 	
 	//soft SPI
-	/*
+	
 	u8 i;
 	for(i=0;i<8;i++)
 	{			  
@@ -65,7 +86,7 @@ void LCD_Writ_Bus(u8 dat)
 		LCD_SCLK_Set();
 		dat<<=1;
 	}	
-	*/
+	
 }
 
 
@@ -87,12 +108,12 @@ void LCD_WR_DATA8(u8 dat)
 ******************************************************************************/
 void LCD_WR_DATA(u16 dat)
 {
-//	LCD_Writ_Bus(dat>>8);
-//	LCD_Writ_Bus(dat);
-	uint8_t temp[2];
-	temp[0]=(dat>>8)&0xff;
-	temp[1]=dat&0xff;
-	HAL_SPI_Transmit(&hspi1,temp,2,1);
+	LCD_Writ_Bus(dat>>8);
+	LCD_Writ_Bus(dat);
+//	uint8_t temp[2];
+//	temp[0]=(dat>>8)&0xff;
+//	temp[1]=dat&0xff;
+//	HAL_SPI_Transmit(&hspi1,temp,2,1);
 	
 }
 
@@ -135,8 +156,8 @@ void LCD_Address_Set(u16 x1,u16 y1,u16 x2,u16 y2)
 ******************************************************************************/
 void LCD_Set_Light(uint8_t dc)
 {
-	if(dc>=5 && dc<=100)
-		__HAL_TIM_SetCompare(&htim2,TIM_CHANNEL_1,dc*PWM_PERIOD/100);
+//	if(dc>=5 && dc<=100)
+//		__HAL_TIM_SetCompare(&htim3,TIM_CHANNEL_3,dc*PWM_PERIOD/100);
 }
 
 
@@ -147,8 +168,8 @@ void LCD_Set_Light(uint8_t dc)
 ******************************************************************************/
 void LCD_Close_Light(void)
 {
-	__HAL_TIM_SetCompare(&htim2,TIM_CHANNEL_1,0);
-	HAL_TIM_PWM_Stop(&htim2,TIM_CHANNEL_1);
+	//__HAL_TIM_SetCompare(&htim3,TIM_CHANNEL_3,0);
+	//HAL_TIM_PWM_Stop(&htim3,TIM_CHANNEL_3);
 }
 
 
@@ -159,7 +180,7 @@ void LCD_Close_Light(void)
 ******************************************************************************/
 void LCD_Open_Light(void)
 {
-	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);
+	//HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_3);
 }
 
 /******************************************************************************
@@ -279,6 +300,8 @@ void LCD_Init(void)
 	LCD_WR_REG(0x21); 
 
 	LCD_WR_REG(0x29); 
+	
+	printf("LCD_Init");
 }
 
 

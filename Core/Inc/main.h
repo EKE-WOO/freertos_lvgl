@@ -61,6 +61,7 @@ void Error_Handler(void);
 #define LED_FLASHING_GPIO_Port GPIOA
 #define KEY_Pin GPIO_PIN_3
 #define KEY_GPIO_Port GPIOA
+#define KEY_EXTI_IRQn EXTI3_IRQn
 #define BL_PWR_Pin GPIO_PIN_8
 #define BL_PWR_GPIO_Port GPIOC
 #define BT_PWR_Pin GPIO_PIN_9

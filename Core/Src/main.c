@@ -29,6 +29,7 @@
 #include "bt.h"
 #include "delay.h"
 #include <stdio.h>
+#include "zsbm800x_drv.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -98,6 +99,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 	BT_Power_On();
+  // PowerOn();
+
+  // ZSBM800X_Init(ECG_PPG_MODE);
 
   /* USER CODE END 2 */
 

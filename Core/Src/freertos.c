@@ -69,6 +69,7 @@ void vApplicationIdleHook(void);
 void vApplicationTickHook(void);
 
 /* USER CODE BEGIN 2 */
+static signed char pcwriteBuffer[200];
 void vApplicationIdleHook( void )
 {
    /* vApplicationIdleHook() will only be called if configUSE_IDLE_HOOK is set
@@ -80,6 +81,8 @@ void vApplicationIdleHook( void )
    important that vApplicationIdleHook() is permitted to return to its calling
    function, because it is the responsibility of the idle task to clean up
    memory allocated by the kernel to any task that has since been deleted. */
+  //  vTaskList (pcwriteBuffer);
+  //  printf("%s\r\n",pcwriteBuffer);
 }
 /* USER CODE END 2 */
 
@@ -102,6 +105,7 @@ void vApplicationTickHook( void )
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
 	Queue_init();
+  Semaphore_init();
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */

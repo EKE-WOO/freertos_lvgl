@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L433xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../MYUSER;../Middlewares/LVGL/GUI;../Middlewares/LVGL/GUI/lvgl;../Middlewares/LVGL/GUI/lvgl/src;../Middlewares/LVGL/GUI/lvgl/examples/porting;..\BSP\KEY;..\SYSTEM;..\BSP\POWER;..\BSP\BT</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../MYUSER;../Middlewares/LVGL/GUI;../Middlewares/LVGL/GUI/lvgl;../Middlewares/LVGL/GUI/lvgl/src;../Middlewares/LVGL/GUI/lvgl/examples/porting;../BSP/KEY;../SYSTEM;../BSP/POWER;../BSP/BT;../BSP/LCD;../BSP/IIC;../BSP/TOUCH;../BSP/zsbm8000_drive_20241008</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1710,6 +1710,66 @@
               <FileName>bt.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\BT\bt.c</FilePath>
+            </File>
+            <File>
+              <FileName>lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\LCD\lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>lcd_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\LCD\lcd_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>CST816.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\TOUCH\CST816.c</FilePath>
+            </File>
+            <File>
+              <FileName>iic_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\IIC\iic_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>zsbm800x_drv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c</FilePath>
+            </File>
+            <File>
+              <FileName>zsbm800x_ecg_ra.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\zsbm8000_drive_20241008\zsbm800x_ecg_ra.c</FilePath>
+            </File>
+            <File>
+              <FileName>zsbm800x_drv.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.h</FilePath>
+            </File>
+            <File>
+              <FileName>zsbm800x_ecg_ra.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BSP\zsbm8000_drive_20241008\zsbm800x_ecg_ra.h</FilePath>
+            </File>
+            <File>
+              <FileName>zsbm800x_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\zsbm8000_drive_20241008\zsbm800x_port.c</FilePath>
+            </File>
+            <File>
+              <FileName>zsbm800x_port.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BSP\zsbm8000_drive_20241008\zsbm800x_port.h</FilePath>
+            </File>
+            <File>
+              <FileName>zsbm800x_regcfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BSP\zsbm8000_drive_20241008\zsbm800x_regcfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>zsbm800x_user_cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BSP\zsbm8000_drive_20241008\zsbm800x_user_cfg.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -8,10 +8,10 @@
 /* CST816 dev pin defination */
 
 
-#define TOUCH_RST_PIN GPIO_PIN_8
-#define TOUCH_INT_PIN GPIO_PIN_9
-#define TOUCH_RST_PORT GPIOB
-#define TOUCH_INT_PORT GPIOB
+#define TOUCH_RST_PIN GPIO_PIN_13
+#define TOUCH_INT_PIN GPIO_PIN_6
+#define TOUCH_RST_PORT GPIOC
+#define TOUCH_INT_PORT GPIOA
 
 /* functions define */
 #define TOUCH_RST_0 HAL_GPIO_WritePin(TOUCH_RST_PORT, TOUCH_RST_PIN, GPIO_PIN_RESET)

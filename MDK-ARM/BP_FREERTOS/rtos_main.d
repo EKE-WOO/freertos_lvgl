@@ -48,4 +48,15 @@ bp_freertos\rtos_main.o: ..\MYUSER\rtos_main.h
 bp_freertos\rtos_main.o: ../Core/Inc/usart.h
 bp_freertos\rtos_main.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 bp_freertos\rtos_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
-bp_freertos\rtos_main.o: ..\BSP\KEY\key.h
+bp_freertos\rtos_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+bp_freertos\rtos_main.o: ../BSP/KEY/key.h
+bp_freertos\rtos_main.o: ../BSP/LCD/lcd.h
+bp_freertos\rtos_main.o: ../SYSTEM/sys.h
+bp_freertos\rtos_main.o: ../BSP/zsbm8000_drive_20241008/zsbm800x_drv.h
+bp_freertos\rtos_main.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+bp_freertos\rtos_main.o: ../BSP/zsbm8000_drive_20241008/zsbm800X_port.h
+bp_freertos\rtos_main.o: ../BSP/zsbm8000_drive_20241008/zsbm800x_regcfg.h
+bp_freertos\rtos_main.o: ../BSP/zsbm8000_drive_20241008/zsbm800X_ecg_ra.h
+bp_freertos\rtos_main.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+bp_freertos\rtos_main.o: ../BSP/zsbm8000_drive_20241008/zsbm800x_drv.h
+bp_freertos\rtos_main.o: ../Core/Inc/gpio.h

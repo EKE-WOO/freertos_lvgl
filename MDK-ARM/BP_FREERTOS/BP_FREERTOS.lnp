@@ -209,6 +209,13 @@
 "bp_freertos\key.o"
 "bp_freertos\power.o"
 "bp_freertos\bt.o"
+"bp_freertos\lcd.o"
+"bp_freertos\lcd_init.o"
+"bp_freertos\cst816.o"
+"bp_freertos\iic_hal.o"
+"bp_freertos\zsbm800x_drv.o"
+"bp_freertos\zsbm800x_ecg_ra.o"
+"bp_freertos\zsbm800x_port.o"
 "bp_freertos\delay.o"
 --library_type=microlib --strict --scatter "BP_FREERTOS\BP_FREERTOS.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

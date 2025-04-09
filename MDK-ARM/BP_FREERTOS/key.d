@@ -34,8 +34,8 @@ bp_freertos\key.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h
 bp_freertos\key.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h
 bp_freertos\key.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h
 bp_freertos\key.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
-bp_freertos\key.o: ..\SYSTEM\delay.h
-bp_freertos\key.o: ..\SYSTEM\sys.h
+bp_freertos\key.o: ../SYSTEM/delay.h
+bp_freertos\key.o: ../SYSTEM/sys.h
 bp_freertos\key.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 bp_freertos\key.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 bp_freertos\key.o: ../Core/Inc/FreeRTOSConfig.h
@@ -49,5 +49,14 @@ bp_freertos\key.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 bp_freertos\key.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 bp_freertos\key.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 bp_freertos\key.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-bp_freertos\key.o: ..\BSP\POWER\power.h
-bp_freertos\key.o: ..\BSP\BT\bt.h
+bp_freertos\key.o: ../BSP/POWER/power.h
+bp_freertos\key.o: ../BSP/BT/bt.h
+bp_freertos\key.o: ../BSP/zsbm8000_drive_20241008/zsbm800x_drv.h
+bp_freertos\key.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+bp_freertos\key.o: ../BSP/zsbm8000_drive_20241008/zsbm800X_port.h
+bp_freertos\key.o: ../BSP/zsbm8000_drive_20241008/zsbm800x_regcfg.h
+bp_freertos\key.o: ../BSP/zsbm8000_drive_20241008/zsbm800X_ecg_ra.h
+bp_freertos\key.o: H:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+bp_freertos\key.o: ../BSP/zsbm8000_drive_20241008/zsbm800x_drv.h
+bp_freertos\key.o: ../Core/Inc/usart.h
+bp_freertos\key.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h

@@ -3,7 +3,7 @@
 
 #include "sys.h"
 
-#define USE_HORIZONTAL 1 //设置横屏或者竖屏显示 0或1为竖屏 2或3为横屏
+#define USE_HORIZONTAL 1  //设置横屏或者竖屏显示 0或1为竖屏 2或3为横屏
 
 
 #if USE_HORIZONTAL==0||USE_HORIZONTAL==1
@@ -23,17 +23,17 @@
 #define SDA_PORT			GPIOB
 #define SDA_PIN				GPIO_PIN_5
 
-#define RES_PORT			GPIOB
-#define RES_PIN				GPIO_PIN_4
+#define RES_PORT			GPIOA
+#define RES_PIN				GPIO_PIN_5
 
-#define DC_PORT				GPIOC
-#define DC_PIN				GPIO_PIN_12
+#define DC_PORT				GPIOB
+#define DC_PIN				GPIO_PIN_4
 
-#define CS_PORT				GPIOD
-#define CS_PIN				GPIO_PIN_2
+#define CS_PORT				GPIOA
+#define CS_PIN				GPIO_PIN_4
 
-#define BLK_PORT			GPIOA
-#define BLK_PIN				GPIO_PIN_15
+//#define BLK_PORT			GPIOA
+//#define BLK_PIN				GPIO_PIN_15
 
 #define LCD_SCLK_Clr() HAL_GPIO_WritePin(SCLK_PORT,SCLK_PIN,GPIO_PIN_RESET)//SCL=SCLK
 #define LCD_SCLK_Set() HAL_GPIO_WritePin(SCLK_PORT,SCLK_PIN,GPIO_PIN_SET)
@@ -50,8 +50,8 @@
 #define LCD_CS_Clr()   HAL_GPIO_WritePin(CS_PORT,CS_PIN,GPIO_PIN_RESET)//CS
 #define LCD_CS_Set()   HAL_GPIO_WritePin(CS_PORT,CS_PIN,GPIO_PIN_SET)
 
-#define LCD_BLK_Clr()  HAL_GPIO_WritePin(BLK_PORT,BLK_PIN,GPIO_PIN_RESET)//BLK
-#define LCD_BLK_Set()  HAL_GPIO_WritePin(BLK_PORT,BLK_PIN,GPIO_PIN_SET)
+//#define LCD_BLK_Clr()  HAL_GPIO_WritePin(BLK_PORT,BLK_PIN,GPIO_PIN_RESET)//BLK
+//#define LCD_BLK_Set()  HAL_GPIO_WritePin(BLK_PORT,BLK_PIN,GPIO_PIN_SET)
 
 void LCD_GPIO_Init(void);//初始化GPIO
 void LCD_Writ_Bus(u8 dat);//模拟SPI时序

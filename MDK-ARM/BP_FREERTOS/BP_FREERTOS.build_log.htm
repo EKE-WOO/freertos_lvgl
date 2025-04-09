@@ -17,24 +17,82 @@ Library Manager: ArmAr.exe V5.06 update 6 (build 750)
 Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
 CPU DLL:         SARMCM3.DLL V5.29.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Target DLL:      Segger\JL2CM3.dll V2.99.36.0
 Dialog DLL:      TCM.DLL V1.36.5.0
  
 <h2>Project:</h2>
 F:\A_code\BP_code\A_LVGL\BP_FREERTOS_LVGL\MDK-ARM\BP_FREERTOS.uvprojx
-Project File Date:  03/05/2025
+Project File Date:  03/28/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'H:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'BP_FREERTOS'
-compiling key.c...
-..\BSP\KEY\key.c(180): warning:  #1-D: last line of file ends without a newline
+compiling lcd.c...
+../BSP/zsbm8000_drive_20241008/zsbm800x_drv.h(277): warning:  #1295-D: Deprecated declaration test_reg - give arg types
+  void test_reg();
+..\BSP\LCD\lcd.c(7068): warning:  #1-D: last line of file ends without a newline
   }
-..\BSP\KEY\key.c: 1 warning, 0 errors
+..\BSP\LCD\lcd.c: 2 warnings, 0 errors
+compiling zsbm800x_drv.c...
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.h(277): warning:  #1295-D: Deprecated declaration test_reg - give arg types
+  void test_reg();
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(232): warning:  #550-D: variable "tmp"  was set but never used
+  	uint16_t tmp;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(830): warning:  #177-D: variable "tmp"  was declared but never referenced
+  	uint16_t tmp;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(886): warning:  #177-D: variable "tmp"  was declared but never referenced
+  	uint16_t tmp;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1125): warning:  #177-D: variable "tiagainmax"  was declared but never referenced
+  	uint8_t currentmin, currentmax, tiagainmax ,tiagainmin ;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1125): warning:  #177-D: variable "tiagainmin"  was declared but never referenced
+  	uint8_t currentmin, currentmax, tiagainmax ,tiagainmin ;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1126): warning:  #177-D: variable "GreenTiaStep"  was declared but never referenced
+  	static uint8_t GreenTiaStep = 0, RedTiaStep = 0, IrTiaStep = 0;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1126): warning:  #177-D: variable "RedTiaStep"  was declared but never referenced
+  	static uint8_t GreenTiaStep = 0, RedTiaStep = 0, IrTiaStep = 0;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1126): warning:  #177-D: variable "IrTiaStep"  was declared but never referenced
+  	static uint8_t GreenTiaStep = 0, RedTiaStep = 0, IrTiaStep = 0;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1127): warning:  #177-D: variable "GreenFirst"  was declared but never referenced
+  	static uint8_t GreenFirst = 1, RedFirst = 1, IrFirst = 1;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1128): warning:  #177-D: variable "GreenCurBefMin"  was declared but never referenced
+  	static uint8_t GreenCurBefMin = 0, GreenCurBefMax = 0, RedCurBefMin = 0, RedCurBefMax = 0, IrCurBefMin = 0, IrCurBefMax = 0;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1128): warning:  #177-D: variable "GreenCurBefMax"  was declared but never referenced
+  	static uint8_t GreenCurBefMin = 0, GreenCurBefMax = 0, RedCurBefMin = 0, RedCurBefMax = 0, IrCurBefMin = 0, IrCurBefMax = 0;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1129): warning:  #177-D: variable "tia_step"  was declared but never referenced
+  	uint8_t *tia_step, *first, *bef_led_currnet_min, *bef_led_currnet_max;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1129): warning:  #177-D: variable "bef_led_currnet_min"  was declared but never referenced
+  	uint8_t *tia_step, *first, *bef_led_currnet_min, *bef_led_currnet_max;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1129): warning:  #177-D: variable "bef_led_currnet_max"  was declared but never referenced
+  	uint8_t *tia_step, *first, *bef_led_currnet_min, *bef_led_currnet_max;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1199): warning:  #550-D: variable "currentmin"  was set but never used
+  	uint8_t currentmin, currentmax, tiagainmax ,tiagainmin ;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1199): warning:  #550-D: variable "currentmax"  was set but never used
+  	uint8_t currentmin, currentmax, tiagainmax ,tiagainmin ;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1199): warning:  #550-D: variable "tiagainmax"  was set but never used
+  	uint8_t currentmin, currentmax, tiagainmax ,tiagainmin ;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1199): warning:  #550-D: variable "tiagainmin"  was set but never used
+  	uint8_t currentmin, currentmax, tiagainmax ,tiagainmin ;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1200): warning:  #177-D: variable "GreenTiaStep"  was declared but never referenced
+  	static uint8_t GreenTiaStep = 0, RedTiaStep = 0, IrTiaStep = 0;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1201): warning:  #177-D: variable "GreenFirst"  was declared but never referenced
+  	static uint8_t GreenFirst = 1, RedFirst = 1, IrFirst = 1;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1202): warning:  #177-D: variable "GreenCurBefMin"  was declared but never referenced
+  	static uint8_t GreenCurBefMin = 0, GreenCurBefMax = 0, RedCurBefMin = 0, RedCurBefMax = 0, IrCurBefMin = 0, IrCurBefMax = 0;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1202): warning:  #177-D: variable "GreenCurBefMax"  was declared but never referenced
+  	static uint8_t GreenCurBefMin = 0, GreenCurBefMax = 0, RedCurBefMin = 0, RedCurBefMax = 0, IrCurBefMin = 0, IrCurBefMax = 0;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1421): warning:  #223-D: function "abs" declared implicitly
+      uint8_t red_step = (abs(red_delta) > 5000) ? 2 : AGC_CURRENT_STEP;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(1628): warning:  #177-D: variable "ptr"  was declared but never referenced
+  	int16_t *ptr, intstatus=0 ;
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(2187): warning:  #940-D: missing return statement at end of non-void function "ZSBM800X_32KClkOutPutToIO0" 
+  }
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c(2210): warning:  #940-D: missing return statement at end of non-void function "ZSBM800X_24MClkDivideBy750OutPutToIO0" 
+  }
+..\BSP\zsbm8000_drive_20241008\zsbm800x_drv.c: 27 warnings, 0 errors
 linking...
-Program Size: Code=18968 RO-data=584 RW-data=176 ZI-data=20048  
+Program Size: Code=32552 RO-data=15220 RW-data=292 ZI-data=29300  
 FromELF: creating hex file...
-"BP_FREERTOS\BP_FREERTOS.axf" - 0 Error(s), 1 Warning(s).
+"BP_FREERTOS\BP_FREERTOS.axf" - 0 Error(s), 29 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -57,7 +115,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:07
 </pre>
 </body>
 </html>

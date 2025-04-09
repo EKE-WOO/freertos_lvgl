@@ -7,10 +7,10 @@ CST816_Info	CST816_Instance;
 
 iic_bus_t CST816_dev =
 {
-	.IIC_SDA_PORT = GPIOB,
-	.IIC_SCL_PORT = GPIOB,
-	.IIC_SDA_PIN = GPIO_PIN_7,
-	.IIC_SCL_PIN = GPIO_PIN_6,
+	.IIC_SDA_PORT = GPIOC,
+	.IIC_SCL_PORT = GPIOC,
+	.IIC_SDA_PIN = GPIO_PIN_1,
+	.IIC_SCL_PIN = GPIO_PIN_0,
 };
 
 /*
@@ -147,7 +147,7 @@ uint8_t CST816_Get_FingerNum(void)
 */
 uint8_t CST816_Get_ChipID(void)
 {
-	return CST816_IIC_ReadREG(ChipID);
+	return CST816_IIC_ReadREG(0XA7);
 }
 
 
